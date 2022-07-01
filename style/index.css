@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: "poppins-medium";
-  src: url("/assets/font/Poppins-Medium.ttf");
+  src: url(../assets/font/Poppins-Medium.ttf);
 }
 @font-face {
   font-family: "allura-regular";
-  src: url("/assets/font/Allura-Regular.ttf");
+  src: url(../assets/font/Allura-Regular.ttf);
 }
 @font-face {
   font-family: "roboto-light";
-  src: url("/assets/font/Roboto-Light.ttf");
+  src: url(../assets/font/Roboto-Light.ttf);
 }
 * {
   margin: 0;
@@ -198,7 +198,7 @@ header .header-title p {
 }
 
 .about-right {
-  background: url("/assets/img/store-01.jpg") center/cover;
+  background: url(../assets/img/store-01.jpg) center/cover;
 }
 
 .ctn-menu {
@@ -394,10 +394,10 @@ header .header-title p {
   grid-template-columns: 40% 60%;
 }
 .ctn-event .event-content .img-event-1, .ctn-event .event-content-3 .img-event-1 {
-  background: url("/assets/img/event-01.jpg") center/cover;
+  background: url(../assets/img/event-01.jpg) center/cover;
 }
 .ctn-event .event-content .img-event-2, .ctn-event .event-content-3 .img-event-2 {
-  background: url("/assets/img/event-02.jpg") center/cover;
+  background: url(../assets/img/event-02.jpg) center/cover;
 }
 .ctn-event .event-content .ctn-date-event, .ctn-event .event-content .ctn-date-event-3, .ctn-event .event-content-3 .ctn-date-event, .ctn-event .event-content-3 .ctn-date-event-3 {
   display: flex;
@@ -469,7 +469,7 @@ header .header-title p {
   grid-column: 2/3;
   grid-row: 1/3;
   padding: 30px;
-  background: url("/assets/img/event-03.jpg") center/cover;
+  background: url(../assets/img/event-03.jpg) center/cover;
 }
 @media screen and (max-width: 1500px) {
   .ctn-event .event-3 {
@@ -513,7 +513,7 @@ header .header-title p {
   position: absolute;
   width: 80px;
   height: 80px;
-  background: url("/assets/img/avatar-02.jpg") center/cover;
+  background: url(../assets/img/avatar-02.jpg) center/cover;
   border-radius: 50%;
   top: 0;
   left: 50%;
@@ -525,7 +525,7 @@ header .header-title p {
   position: absolute;
   width: 100vw;
   height: 100%;
-  background: url("/assets/img/gmap.jpg") center/cover;
+  background: url(../assets/img/gmap.jpg) center/cover;
   left: 50%;
   top: 70%;
   transform: translateX(-50%);

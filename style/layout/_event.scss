@@ -35,10 +35,10 @@
 		grid-template-columns: 40% 60%;
 
 		.img-event-1 {
-			background: url("/assets/img/event-01.jpg") center / cover;
+			background: url(../assets/img/event-01.jpg) center / cover;
 		}
 		.img-event-2 {
-			background: url("/assets/img/event-02.jpg") center / cover;
+			background: url(../assets/img/event-02.jpg) center / cover;
 		}
 		.ctn-date-event, .ctn-date-event-3 {
 			@include center;
@@ -107,7 +107,7 @@
 		grid-column: 2/3;
 		grid-row: 1/3;
 		padding: 30px;
-		background: url("/assets/img/event-03.jpg") center / cover;
+		background: url(../assets/img/event-03.jpg) center / cover;
         @media screen and (max-width:1500px) {
             grid-column: 1/2;
             grid-row: 3/4;
