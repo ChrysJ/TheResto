@@ -1,0 +1,89 @@
+// ------------------FONT
+
+@font-face {
+	font-family: "poppins-medium";
+	src: url("/assets/font/Poppins-Medium.ttf");
+}
+@font-face {
+	font-family: "allura-regular";
+	src: url("/assets/font/Allura-Regular.ttf");
+}
+@font-face {
+	font-family: "roboto-light";
+	src: url("/assets/font/Roboto-Light.ttf");
+}
+
+$font1: "poppins-medium", sans-serif;
+$font2: "allura-regular", serif;
+$font3: "roboto-light", serif;
+
+//  ------------------COLOR
+
+$color1: #eeeeee;
+$color2: #21201e;
+$color3: #a47144;
+$color4: #a9a69e;
+
+//  --------------------------------------
+
+//  ------------------MIXIN
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin title {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+//  --------------------------------------
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $color2;
+	text-align: center;
+	font-family: $font3;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $color1;
+}
+a:visited {
+	color: $color1;
+}
+
+//  --------------------------------------
+
+p {
+	font-size: 18px;
+}
+
+//  ------------------TITLE
+
+h2,
+h4 {
+	font-family: $font2;
+	color: $color3;
+	font-weight: 100;
+}
+
+h1,
+h3,
+h5,
+h6 {
+	font-family: $font1;
+	color: $color2;
+}

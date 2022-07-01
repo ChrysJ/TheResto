@@ -1,0 +1,79 @@
+//  ------------------NAV
+
+//  ------------------HEADER
+header{
+    height: 100vh;
+    background: url("../assets/img/bg-slider-06.jpg") center / cover;
+
+    nav {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        margin: 0 auto;
+        height: 15%;
+        width: 100%;
+        max-width: 1400px;
+
+        #logo{
+            @include center;
+            justify-content: flex-start;
+            font-family: $font2, cursive;
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+        .navbar{
+            @include center;
+            margin: 0 20px;
+            ul, li, a{
+                @include center;
+            }
+            ul{
+                width: 100%;
+                justify-content: space-evenly;
+            }
+            a{
+                font-size: 14px;
+                font-family: $font3;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
+        .socialmedia{
+            @include center;
+            justify-content: flex-end;
+            ul{
+                @include center;
+            }
+            li{
+                padding: 0 10px;
+            }
+        }
+    }
+.header-title{
+    height: 85%;
+    @include center;
+    justify-content: flex-start;
+    margin-top: 10vh;
+    flex-direction: column;
+    h2{
+        font-size: 3.7em;
+    }
+    h1{
+        
+        line-height: 30px;
+        font-size: 4.5em;
+        
+    }
+    h1, p{
+        @include title;
+        letter-spacing: 5px;
+        color: $color1;
+    }
+    img{
+        margin: 80px 0;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+}
+/*# sourceMappingURL=header.css.map */
