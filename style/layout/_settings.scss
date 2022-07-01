@@ -36,7 +36,6 @@ $color4: #a9a69e;
 
 @mixin title {
 	text-transform: uppercase;
-	letter-spacing: 3px;
 }
 
 //  --------------------------------------
@@ -73,11 +72,11 @@ p {
 
 //  ------------------TITLE
 
-h2,
-h4 {
+h2{
 	font-family: $font2;
 	color: $color3;
 	font-weight: 100;
+	line-height: 20px;
 }
 
 h1,

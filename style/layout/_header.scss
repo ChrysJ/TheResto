@@ -1,79 +1,79 @@
-//  ------------------NAV
+header {
+	height: 100vh;
+	background: url("../assets/img/bg-slider-06.jpg") center / cover;
+	position: relative;
 
-//  ------------------HEADER
-header{
-    height: 100vh;
-    background: url("../assets/img/bg-slider-06.jpg") center / cover;
+	//  ------------------NAV
 
-    nav {
-        display: grid;
-        grid-template-columns: 10% 80% 10%;
-        margin: 0 auto;
-        height: 15%;
-        width: 100%;
-        max-width: 1400px;
+	nav {
+		display: grid;
+		grid-template-columns: 10% 80% 10%;
+		margin: 0 auto;
+		height: 10%;
+		width: 100%;
+		max-width: 1400px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
 
-        #logo{
-            @include center;
-            justify-content: flex-start;
-            font-family: $font2, cursive;
-            font-size: 1.5em;
-            font-weight: 900;
-        }
-        .navbar{
-            @include center;
-            margin: 0 20px;
-            ul, li, a{
-                @include center;
-            }
-            ul{
-                width: 100%;
-                justify-content: space-evenly;
-            }
-            a{
-                font-size: 14px;
-                font-family: $font3;
-                font-weight: 600;
-                letter-spacing: 1px;
-            }
-        }
-        .socialmedia{
-            @include center;
-            justify-content: flex-end;
-            ul{
-                @include center;
-            }
-            li{
-                padding: 0 10px;
-            }
-        }
-    }
-.header-title{
-    height: 85%;
-    @include center;
-    justify-content: flex-start;
-    margin-top: 10vh;
-    flex-direction: column;
-    h2{
-        font-size: 3.7em;
-    }
-    h1{
-        
-        line-height: 30px;
-        font-size: 4.5em;
-        
-    }
-    h1, p{
-        @include title;
-        letter-spacing: 5px;
-        color: $color1;
-    }
-    img{
-        margin: 80px 0;
-    }
-    p{
-        font-size: 18px;
-    }
-}
+		#logo {
+			justify-self: start;
+			align-self: center;
+			font-family: $font2, cursive;
+			font-size: 1.5em;
+			font-weight: 900;
+		}
+		.navbar {
+			align-self: center;
+			margin: 0 20px;
+			ul {
+				@include center;
+				justify-content: space-evenly;
+				width: 100%;
+			}
+			a {
+				font-family: $font3;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 1px;
+			}
+		}
+		.socialmedia,
+		ul {
+			@include center;
+			justify-content: flex-end;
+			li {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	//  ------------------HEADER
+	.header-title {
+		height: 100%;
+		@include center;
+		flex-direction: column;
+		padding-bottom: 5%;
+		h2 {
+			font-size: 3.7em;
+		}
+		h1,
+		p {
+			@include title;
+			color: $color1;
+		}
+		h1 {
+			font-size: 4.5em;
+			letter-spacing: 8px;
+		}
+		img {
+			margin: 5vh 0;
+		}
+		p {
+			font-size: 18px;
+			letter-spacing: 5px;
+		}
+	}
 }
 /*# sourceMappingURL=header.css.map */

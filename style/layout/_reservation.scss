@@ -1,67 +1,111 @@
-.ctn-reservation{
-    display: grid;
-    grid-template-columns: 30% 70%;
-    margin: 280px auto;
-    width: 80%;
-    max-width: 1400px;
-    max-height: 600px;
+//  ------------------RESERVATION
 
-    h4{
-        font-size: 3.5em;
-    }
-    h3{
-        @include title;
-        font-size: 2.6em;
-        letter-spacing:0;
-        line-height: 20px;
-    }
-    img{
-        width: 40px;
-        margin:50px 0;
-    }
+.ctn-reservation {
+	display: grid;
+	grid-template-columns: 30% 70%;
+	width: 100%;
+	max-width: 1300px;
+	height: 100%;
+	max-height: 600px;
+	margin: 280px auto 0;
 
-    .open{
-        background-color: #0D0D0D;
-    }
-    .booking{
-background-color: $color1;
-padding: 10%;
+	h2 {
+		font-size: 3.5em;
+	}
+	h3 {
+		@include title;
+		font-size: 2.5em;
+		letter-spacing: 1px;
+	}
+	img {
+		margin-top: 35px;
+	}
 
+	//  ------------------OPEN
 
-.contact{  
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    margin: 25px;
-    justify-content: center;
+	.open {
+		background-color: #000000;
+		padding: 20px;
+
+		.open-content {
+			@include center;
+			justify-content: space-evenly;
+			flex-direction: column;
+			padding: 50px 10px;
+			border: dashed 1px $color1;
+			height: 100%;
+		}
+		h2 {
+			font-size: 3em;
+		}
+		h3 {
+			@include title;
+			color: $color1;
+			font-size: 2em;
+		}
+		img {
+			margin-top: 35px;
+		}
+
+		h4,
+		a {
+			@include title;
+			color: $color3;
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+
+		h4 {
+			margin: 40px 0 20px;
+		}
+		p {
+			color: $color1;
+		}
+		a {
+			margin-top: 40px;
+		}
+	}
+
+	//  ------------------BOOKING
+
+	.booking {
+		background-color: $color1;
+		padding: 10%;
+
+		.contact {
+			display: grid;
+			grid-template-columns: repeat(3, 33%);
+			justify-content: center;
+			margin: 25px;
+		}
+		select,
+		input {
+			margin: 0px 20px 40px;
+			padding: 15px 0;
+		}
+		select,
+		input {
+			background: none;
+			border: none;
+			border-bottom: solid 1px $color4;
+			font-size: 18px;
+		}
+
+		button {
+			@include title;
+			color: $color1;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 5px;
+			border-radius: 50px;
+			padding: 20px 50px;
+			background-color: $color2;
+			cursor: pointer;
+			transition: 300ms;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
 }
-select, input{
-    margin: 0px 15px 40px;
-    padding: 15px 0;
-}
-select, input{
-    background: none;
-    border: none;
-    border-bottom: solid 1px $color4;
-    font-size: 18px;
-}
-
-button{
-    @include title;
-    font-size: 18px;
-    color: $color1;
-    font-weight: 700;
-    letter-spacing: 5px;
-    border-radius: 50px;
-    padding: 20px 50px;
-    background-color: $color2;
-    cursor: pointer;
-    transition: 300ms;
-
-    &:hover{
-        transform: scale(1.05);
-    }
-}
-    }
-}
-
-

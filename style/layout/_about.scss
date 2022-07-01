@@ -1,58 +1,60 @@
-.ctn-about{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 550px;
+//  ------------------ABOUT
 
-    .about-left{
-        background-color: $color1;
-        display: grid;
-        padding: 20px;
-        grid-template-columns: 100%;
-        grid-template-rows: 100%;
-            height: 100%;
-        
-        .ctn-left{
-            @include center;
-            flex-direction: column;
-            border: dashed 1px $color3;
-            height: 100%;
-            
-        h4{ 
-                font-size: 2.8em;
-                line-height: 20px
-            }
-            h3{
-                @include title;
-                font-size: 2em;
-                letter-spacing: 0px;
-            }
-            img:nth-of-type(1){
-                margin: 35px 0;
-                width: 40px;
-            }
-            p{
-                max-width: 800px;
-            }
-            img:nth-of-type(2){
-                width: 90px;
-                border-radius: 50%;
-                margin: 35px 0 15px;
-            }
-        h5{
-            font-size: 25px;
-            font-weight: 500;
-        }
-    h6{
-        @include title;
-        letter-spacing: 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: $color4;
-}
-        }
-    }
+.ctn-about {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	min-height: 580px;
+
+	//  ------------------LEFT
+
+	.ctn-about-left {
+		background-color: $color1;
+		padding: 20px;
+
+		.about-left-content {
+			height: 100%;
+			@include center;
+			flex-direction: column;
+			border: dashed 1px $color3;
+			padding: 30px;
+
+			h2 {
+				font-size: 3em;
+			}
+			h3 {
+				@include title;
+				font-size: 2em;
+			}
+			img:nth-of-type(1) {
+				margin: 35px 0;
+			}
+			p {
+				width: 90%;
+				max-width: 600px;
+			}
+			img:nth-of-type(2) {
+				width: 90px;
+				border-radius: 50%;
+				margin: 35px 0 20px;
+			}
+			h5,
+			h6 {
+				font-weight: 500;
+			}
+			h5 {
+				font-size: 25px;
+			}
+			h6 {
+				@include title;
+				font-size: 18px;
+				color: $color4;
+			}
+		}
+	}
 }
 
-    .about-right{
-    background: url(../assets/img/store-01.jpg) center / cover;
-    }
+//  ------------------RIGHT
+
+.about-right {
+	background: url(../assets/img/store-01.jpg) center / cover;
+}
