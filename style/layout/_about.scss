@@ -4,20 +4,23 @@
 	display: grid;
 	grid-template-columns: 50% 50%;
 	min-height: 580px;
+	@media only screen and (max-width : 650px){
+		grid-template-columns: 100%;
+	}
 
 	//  ------------------LEFT
 
 	.ctn-about-left {
 		background-color: $color1;
 		padding: 20px;
-
+		
 		.about-left-content {
 			height: 100%;
 			@include center;
 			flex-direction: column;
 			border: dashed 1px $color3;
 			padding: 30px;
-
+		
 			h2 {
 				font-size: 3em;
 			}
@@ -57,4 +60,7 @@
 
 .about-right {
 	background: url(../assets/img/store-01.jpg) center / cover;
+	@media only screen and (max-width : 650px){
+		display: none;
+	}
 }

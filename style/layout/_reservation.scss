@@ -3,11 +3,18 @@
 .ctn-reservation {
 	display: grid;
 	grid-template-columns: 30% 70%;
-	width: 100%;
+	width: 90%;
 	max-width: 1300px;
 	height: 100%;
-	max-height: 600px;
+	min-height: 600px;
 	margin: 280px auto 0;
+	@media only screen and (max-width: 1050px) {
+		grid-template-columns: 100%;
+	}
+	@media only screen and (max-width: 1050px) {
+		margin: 280px auto 160px;
+	}
+
 
 	h2 {
 		font-size: 3.5em;
@@ -71,17 +78,32 @@
 	.booking {
 		background-color: $color1;
 		padding: 10%;
+		@media only screen and (max-width: 510px) {
+			padding: 20% 5%;
+			}
+	
 
 		.contact {
 			display: grid;
 			grid-template-columns: repeat(3, 33%);
 			justify-content: center;
 			margin: 25px;
+			@media only screen and (max-width: 1050px) {
+				grid-template-columns: 100%;
+			}
 		}
 		select,
 		input {
 			margin: 0px 20px 40px;
 			padding: 15px 0;
+			@media only screen and (max-width: 1050px) {
+			min-width: 50%;
+			margin: 0 auto 40px;
+			}
+			@media only screen and (max-width: 750px) {
+				min-width: 100%;
+				margin: 0 auto 40px;
+				}
 		}
 		select,
 		input {

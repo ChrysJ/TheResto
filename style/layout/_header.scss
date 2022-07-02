@@ -16,10 +16,14 @@ header {
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
+		@media only screen and (max-width : 750px){
+			grid-template-columns: 50% 50%;
+		}
 
 		#logo {
-			justify-self: start;
+			justify-self: center;
 			align-self: center;
+			margin-left: 10px;
 			font-family: $font2, cursive;
 			font-size: 1.5em;
 			font-weight: 900;
@@ -27,6 +31,11 @@ header {
 		.navbar {
 			align-self: center;
 			margin: 0 20px;
+			@media only screen and (max-width : 750px){
+				display: none;
+			}
+				
+			
 			ul {
 				@include center;
 				justify-content: space-evenly;
@@ -39,15 +48,16 @@ header {
 				letter-spacing: 1px;
 			}
 		}
-		.socialmedia,
-		ul {
+		.socialmedia, ul {
 			@include center;
-			justify-content: flex-end;
+			justify-content: center;
+			margin-right: 10px;
 			li {
 				padding: 0 10px;
 			}
 		}
 	}
+}
 
 	//  ------------------HEADER
 	.header-title {
@@ -55,6 +65,9 @@ header {
 		@include center;
 		flex-direction: column;
 		padding-bottom: 5%;
+		@media only screen and (max-width : 750px){
+			padding-bottom: 35%;
+		}
 		h2 {
 			font-size: 3.7em;
 		}
@@ -66,6 +79,10 @@ header {
 		h1 {
 			font-size: 4.5em;
 			letter-spacing: 8px;
+			@media only screen and (max-width : 750px){
+				font-size: 3em;
+				margin-top: 50px;
+			}
 		}
 		img {
 			margin: 5vh 0;
@@ -75,5 +92,5 @@ header {
 			letter-spacing: 5px;
 		}
 	}
-}
+
 /*# sourceMappingURL=header.css.map */

@@ -72,9 +72,15 @@ header nav {
   left: 50%;
   transform: translateX(-50%);
 }
+@media only screen and (max-width: 750px) {
+  header nav {
+    grid-template-columns: 50% 50%;
+  }
+}
 header nav #logo {
-  justify-self: start;
+  justify-self: center;
   align-self: center;
+  margin-left: 10px;
   font-family: "allura-regular", serif, cursive;
   font-size: 1.5em;
   font-weight: 900;
@@ -82,6 +88,11 @@ header nav #logo {
 header nav .navbar {
   align-self: center;
   margin: 0 20px;
+}
+@media only screen and (max-width: 750px) {
+  header nav .navbar {
+    display: none;
+  }
 }
 header nav .navbar ul {
   display: flex;
@@ -96,18 +107,18 @@ header nav .navbar a {
   font-weight: 600;
   letter-spacing: 1px;
 }
-header nav .socialmedia,
-header nav ul {
+header nav .socialmedia, header nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-right: 10px;
 }
-header nav .socialmedia li,
-header nav ul li {
+header nav .socialmedia li, header nav ul li {
   padding: 0 10px;
 }
-header .header-title {
+
+.header-title {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -115,22 +126,33 @@ header .header-title {
   flex-direction: column;
   padding-bottom: 5%;
 }
-header .header-title h2 {
+@media only screen and (max-width: 750px) {
+  .header-title {
+    padding-bottom: 35%;
+  }
+}
+.header-title h2 {
   font-size: 3.7em;
 }
-header .header-title h1,
-header .header-title p {
+.header-title h1,
+.header-title p {
   text-transform: uppercase;
   color: #eeeeee;
 }
-header .header-title h1 {
+.header-title h1 {
   font-size: 4.5em;
   letter-spacing: 8px;
 }
-header .header-title img {
+@media only screen and (max-width: 750px) {
+  .header-title h1 {
+    font-size: 3em;
+    margin-top: 50px;
+  }
+}
+.header-title img {
   margin: 5vh 0;
 }
-header .header-title p {
+.header-title p {
   font-size: 18px;
   letter-spacing: 5px;
 }
@@ -140,6 +162,11 @@ header .header-title p {
   display: grid;
   grid-template-columns: 50% 50%;
   min-height: 580px;
+}
+@media only screen and (max-width: 650px) {
+  .ctn-about {
+    grid-template-columns: 100%;
+  }
 }
 .ctn-about .ctn-about-left {
   background-color: #eeeeee;
@@ -189,6 +216,11 @@ header .header-title p {
 .about-right {
   background: url(../assets/img/store-01.jpg) center/cover;
 }
+@media only screen and (max-width: 650px) {
+  .about-right {
+    display: none;
+  }
+}
 
 .nav-menu {
   margin: 120px 0;
@@ -209,12 +241,22 @@ header .header-title p {
   min-width: 500px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 580px) {
+  .nav-menu ul {
+    min-width: 90%;
+  }
+}
 .nav-menu a {
   text-transform: none;
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 580px) {
+  .nav-menu a {
+    font-size: 14px;
+  }
 }
 .nav-menu a:after {
   content: "";
@@ -229,8 +271,8 @@ header .header-title p {
 
 .ctn-menu {
   height: 100%;
-  max-height: 750px;
-  width: 100%;
+  min-height: 750px;
+  width: 90%;
   max-width: 1000px;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -241,6 +283,12 @@ header .header-title p {
   border-top: solid #a47144 5px;
   position: relative;
 }
+@media only screen and (max-width: 850px) {
+  .ctn-menu {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 12.5%);
+  }
+}
 .ctn-menu::after {
   content: "";
   position: absolute;
@@ -248,9 +296,15 @@ header .header-title p {
   height: 100%;
   background: url(../assets/img/bg-menu-01.jpg) bottom/cover;
   z-index: -1;
-  top: 25%;
+  top: 20%;
   left: 50%;
   transform: translatex(-50%);
+}
+@media only screen and (max-width: 900px) {
+  .ctn-menu::after {
+    height: 55%;
+    top: 55%;
+  }
 }
 .ctn-menu .menu {
   display: grid;
@@ -260,7 +314,7 @@ header .header-title p {
   border-bottom: dashed #a47144 1px;
 }
 .ctn-menu .menu img {
-  width: 100px;
+  width: 100%;
   border-radius: 50%;
   margin: 35px 0;
 }
@@ -285,15 +339,30 @@ header .header-title p {
   font-size: 20px;
   font-weight: 700;
 }
+@media only screen and (max-width: 1050px) {
+  .ctn-menu .menu span {
+    font-size: 18px;
+  }
+}
 
 .ctn-reservation {
   display: grid;
   grid-template-columns: 30% 70%;
-  width: 100%;
+  width: 90%;
   max-width: 1300px;
   height: 100%;
-  max-height: 600px;
+  min-height: 600px;
   margin: 280px auto 0;
+}
+@media only screen and (max-width: 1050px) {
+  .ctn-reservation {
+    grid-template-columns: 100%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .ctn-reservation {
+    margin: 280px auto 160px;
+  }
 }
 .ctn-reservation h2 {
   font-size: 3.5em;
@@ -351,16 +420,40 @@ header .header-title p {
   background-color: #eeeeee;
   padding: 10%;
 }
+@media only screen and (max-width: 510px) {
+  .ctn-reservation .booking {
+    padding: 20% 5%;
+  }
+}
 .ctn-reservation .booking .contact {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   justify-content: center;
   margin: 25px;
 }
+@media only screen and (max-width: 1050px) {
+  .ctn-reservation .booking .contact {
+    grid-template-columns: 100%;
+  }
+}
 .ctn-reservation .booking select,
 .ctn-reservation .booking input {
   margin: 0px 20px 40px;
   padding: 15px 0;
+}
+@media only screen and (max-width: 1050px) {
+  .ctn-reservation .booking select,
+.ctn-reservation .booking input {
+    min-width: 50%;
+    margin: 0 auto 40px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .ctn-reservation .booking select,
+.ctn-reservation .booking input {
+    min-width: 100%;
+    margin: 0 auto 40px;
+  }
 }
 .ctn-reservation .booking select,
 .ctn-reservation .booking input {
@@ -386,7 +479,12 @@ header .header-title p {
 }
 
 .ctn-main-event {
-  margin: 200px auto;
+  margin: 120px auto 160px;
+}
+@media only screen and (max-width: 635px) {
+  .ctn-main-event {
+    display: none;
+  }
 }
 .ctn-main-event h2 {
   font-size: 3.5em;
@@ -403,13 +501,19 @@ header .header-title p {
 }
 .ctn-main-event .grid-event {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   max-width: 1300px;
   height: 100%;
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 50% 50%;
   grid-gap: 30px;
+}
+@media only screen and (max-width: 1350px) {
+  .ctn-main-event .grid-event {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+  }
 }
 .ctn-main-event .grid-event .img-event-1 {
   background: url(../assets/img/event-01.jpg) center/cover;
@@ -422,6 +526,12 @@ header .header-title p {
   grid-row: 1/3;
   padding: 30px;
   background: url(../assets/img/event-03.jpg) center/cover;
+}
+@media only screen and (max-width: 1350px) {
+  .ctn-main-event .grid-event .ctn-main-event-3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
 }
 .ctn-main-event .grid-event .ctn-event {
   height: 100%;
@@ -530,7 +640,13 @@ header .header-title p {
   margin: 0 auto;
   padding: 80px;
   background-color: #eeeeee;
+  border-top: solid 3px #a47144;
   position: relative;
+}
+@media only screen and (max-width: 750px) {
+  .ctn-localisation {
+    padding: 80px 30px;
+  }
 }
 .ctn-localisation::before {
   content: "";
@@ -565,7 +681,6 @@ header .header-title p {
 }
 .ctn-localisation p::before {
   content: "❝";
-  left: -1.2%;
 }
 .ctn-localisation p::after {
   content: "❞";
@@ -589,18 +704,38 @@ footer {
   padding: 80px;
   background: url(../assets/img/bg-footer.jpg) center/cover;
 }
+@media only screen and (max-width: 960px) {
+  footer {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  footer {
+    background-position: left;
+  }
+}
 footer .ctn-footer {
   height: 100%;
   min-height: 150px;
-  width: 100%;
+  width: 90%;
   max-width: 1300px;
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 0 auto;
   text-align: left;
 }
+@media only screen and (max-width: 750px) {
+  footer .ctn-footer {
+    grid-template-columns: 100%;
+  }
+}
 footer .footer-left {
   margin-right: 10%;
+}
+@media only screen and (max-width: 750px) {
+  footer .footer-left {
+    display: none;
+  }
 }
 footer h2 {
   font-size: 3.5em;
@@ -612,10 +747,12 @@ footer p {
 }
 footer .footer-right {
   margin-left: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+}
+@media only screen and (max-width: 750px) {
+  footer .footer-right {
+    margin-left: 0;
+  }
 }
 footer .footer-right label, footer .footer-right .followus h3 {
   font-family: "poppins-medium", sans-serif;
@@ -624,12 +761,16 @@ footer .footer-right label, footer .footer-right .followus h3 {
   font-size: 1em;
   color: #eeeeee;
 }
+footer .newsletter {
+  margin-bottom: 50px;
+}
 footer .newsletter label {
   display: block;
   margin-bottom: 20px;
 }
 footer .newsletter input {
   width: 50%;
+  min-width: 200px;
   padding: 15px;
   background: none;
   color: #a9a69e;
@@ -638,11 +779,18 @@ footer .newsletter input {
 footer .followus, footer ul {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 footer .followus h3, footer .followus li, footer ul h3, footer ul li {
   margin-right: 40px;
 }
+@media only screen and (max-width: 1080px) {
+  footer .followus h3, footer .followus i, footer ul h3, footer ul i {
+    margin-bottom: 20px;
+  }
+}
 footer .followus li, footer ul li {
+  font-size: 20px;
   display: flex;
   align-items: center;
 }
